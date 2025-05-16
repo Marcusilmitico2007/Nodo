@@ -1,28 +1,38 @@
+public class Nodo<T> {
 
+    T valore;
+    Nodo<T> succ;
 
-public class Nodo<T>{
-    T v;
-    Nodo succ;
-    
-    public Nodo(T v){
-        this.v=v;
-        this.succ=null;
+    public Nodo() {
+        valore = null;
+        succ = null;
     }
-    public T getV(){
-        return v;
+
+    public Nodo( T v ) {
+        super();
+        valore = v;
     }
-    public Nodo<T> getSucc(){
+
+    @Override
+    public String toString() {
+        return valore.toString();
+    }
+
+    public T getValore() {
+        return valore;
+    }
+
+    public void setValore(T valore) {
+        this.valore = valore;
+    }
+
+    public Nodo<T> getSucc() {
         return succ;
     }
-    public void setV(T v){
-        this.v=v;
+
+    public void setSucc(Nodo<T> succ) {
+        this.succ = succ;
     }
-    public void setSucc(Nodo<T> succ){
-        this.succ=succ;
-    }
-    
-    public String toString(){
-        return "il mio valore è:" + v +"\n";
-    }
-    
+
+
 }
